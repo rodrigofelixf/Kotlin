@@ -5,5 +5,26 @@ fun main(args: Array<String>) {
 
     val distToMoon = 92_960_000;// Organizando com Underline
 
-    println(distToMoon)
+    val nome: String =  "Rodrigox";
+
+    if (nome == "Rodrigo") print("Igual") else println("$nome")
+
+    fun somar(a: Int, b: Int): Int {
+        val soma = a + b;
+        return soma;
+
+    }
+
+    println(somar(5, 5))
+
+
+    val count: Int = 50;
+    val answerString: String = if (count == 42) {
+        "I have the answer."
+    } else if (count > 35) {
+        "The answer is close."
+    } else {
+        "The answer eludes me."
+    }
+    println(answerString)
 }
