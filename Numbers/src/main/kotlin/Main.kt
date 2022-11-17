@@ -27,4 +27,15 @@ fun main(args: Array<String>) {
         "The answer eludes me."
     }
     println(answerString)
+
+
+    for (x in 1..10 step 2) {
+        println(x);
+    }
+
+    val items: Array<String> = arrayOf("orange", "apple")
+    when {
+        "orange" in items -> println("juicy")
+        "apple" in items -> println("apple is fine too")
+    }
 }
