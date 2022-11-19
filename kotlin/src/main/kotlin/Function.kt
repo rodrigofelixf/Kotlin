@@ -5,6 +5,7 @@ fun main() {
     println(milesConverter(2f))
     changeA("Amanda")
     countChar("Rodrigo")
+    morning(true)
 
 }
 
@@ -17,7 +18,7 @@ fun helloWorld(): String {
 }
 
 // Function Unit has no return
-fun test() {
+fun test(morning: Any?) {
     println("Hello, Rodrigo")
 }
 
@@ -39,6 +40,14 @@ fun milesConverter(m: Float): Float = (m * 1.6f)
 
 fun changeA(str: String) {
     println(str.replace("a", "x", true).lowercase())
+}
+
+fun morning(dia: Boolean):  String {
+    return if (dia) {
+        "Good morning"
+    } else {
+        "Good evening"
+    }
 }
 
 
