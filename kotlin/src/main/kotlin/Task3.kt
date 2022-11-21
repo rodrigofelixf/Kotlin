@@ -1,16 +1,27 @@
 fun main() {
 
-    println(doSquare(2,2))
-    triangle(3,3,3)
-    ticketShow(15,"kkk", "oo")
+    doSquare()
+   // triangle(3,3,3)
+   // ticketShow(15,"kkk", "oo")
 }
 
 
-fun doSquare(n1: Int, n2: Int): String {
-    return if (n1 == n2) {
-        "Make a square"
-    } else {
-        "Don't make a square"
+fun doSquare() {
+    println("Input side 1: ")
+    val n1 = readLine()
+
+    println("Input side 2: ")
+    val n2 = readLine()
+
+    if ((n1 != null && n2 != "") && (n2 != null && n2 != " ")) {
+        n1.toInt()
+        n2.toInt()
+
+        if (n1 == n2) {
+            println("Make a square")
+        } else {
+            println("Don't make a square")
+        }
     }
 }
 
