@@ -1,5 +1,8 @@
 fun main() {
-    var str: String? = null
+    var n1: Int = 2
+    var n2: Int = 1
 
-    println(str ?: 2 + 2)
+    var resp: String = if (n1 == n2) "Igual" else "Diferente"
+    println(resp)
+
 }
