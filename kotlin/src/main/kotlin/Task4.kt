@@ -52,14 +52,14 @@ fun sumNum(n1: Int, nfinal: Int) {
 
 
 fun stair(num: Int) {
-    var cc: Int = 0
+    var cc = 0
     for (i in 1..num) {
         cc++
     }
 
 }
 
-fun baloon(l: Int): Unit {
+fun baloon(l: Int) {
     var cc: Int = 7
     while (cc < l) {
         cc += 7

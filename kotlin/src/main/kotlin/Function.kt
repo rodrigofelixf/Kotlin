@@ -22,7 +22,7 @@ fun test(morning: Any?) {
     println("Hello, Rodrigo")
 }
 
-fun yearsConvertor(years: Int): Unit  {
+fun yearsConvertor(years: Int)  {
     println("$years years equals")
     println("${years * 12} months")
     println("${years * 365} days")
