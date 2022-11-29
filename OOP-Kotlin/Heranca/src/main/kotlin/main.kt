@@ -4,7 +4,7 @@ open class Electronic(var model: String) {
 }
 
 
-class Computer(model: String) : Electronic(model) {
+class Computer1(model: String) : Electronic(model) {
 
 }
 
