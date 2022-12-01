@@ -1,4 +1,4 @@
-abstract class Mammal(val name: String) {
+/* abstract class Mammal(val name: String) {
 
 
     fun wakeUP() {}
@@ -23,3 +23,5 @@ fun main() {
     dog1.talk()
 
 }
+
+*/
