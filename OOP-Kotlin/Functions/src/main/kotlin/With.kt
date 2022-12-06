@@ -12,4 +12,6 @@ fun main() {
     configuration.run {
         println("$host:$port")
     }
+
+    for (i in 1..10 step 2) println(i)
 }
