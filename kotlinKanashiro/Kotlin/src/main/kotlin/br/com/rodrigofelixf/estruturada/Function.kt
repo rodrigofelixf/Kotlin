@@ -1,4 +1,4 @@
-package br.com.rodrigofelixf
+package br.com.rodrigofelixf.estruturada
 
 import java.math.BigDecimal
 
