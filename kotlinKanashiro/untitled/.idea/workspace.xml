@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7ec786da-d5b8-4e2a-97aa-791419137f7b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/estruturada/Calendar.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/estruturada/Vetor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/poo/classes/Application.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/poo/classes/Person.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/poo/encapsulamento/Application.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/poo/encapsulamento/Calculator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/out/production/Kotlin/META-INF/Kotlin.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin/out/production/Kotlin/META-INF/Kotlin.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/out/production/Kotlin/br/com/rodrigofelixf/ArraysKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/out/production/Kotlin/br/com/rodrigofelixf/FunctionKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/out/production/Kotlin/br/com/rodrigofelixf/HelloWorldKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/out/production/Kotlin/br/com/rodrigofelixf/PrimitiveTypeKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/Arrays.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/estruturada/Arrays.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/Function.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/estruturada/Function.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/HelloWorld.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/estruturada/HelloWorld.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/PrimitiveType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin/src/main/kotlin/br/com/rodrigofelixf/estruturada/PrimitiveType.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2IbV3JIDeZgxrFzK3NFf2p7TCcp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ec786da-d5b8-4e2a-97aa-791419137f7b" name="Changes" comment="" />
+      <created>1670450070786</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670450070786</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
