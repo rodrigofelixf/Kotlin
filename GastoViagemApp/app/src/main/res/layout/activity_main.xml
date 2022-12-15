@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
     <EditText
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="64dp"
-        android:text="SEU GASTO TOTAL SERA DE:"
+        android:text="SEU GASTO TOTAL SERÁ DE:"
         android:textSize="20sp" />
 
     <TextView
@@ -68,15 +68,15 @@
         android:layout_gravity="center"
         android:layout_marginTop="28dp"
         android:text="@string/total_value"
-        android:textColor="@color/purple_700"
+        android:textColor="#199377"
         android:textSize="50sp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#469F86"
+        android:background="@drawable/background_button"
         android:padding="16dp"
         android:text="@string/calculate"
         android:textSize="20sp" />
