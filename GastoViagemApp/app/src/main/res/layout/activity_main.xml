@@ -3,8 +3,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit_distance"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/distance"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="@string/total_km" />
+
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="18dp"
+        android:hint="@string/price"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="@string/price_per_litre" />
+
+    <EditText
+        android:id="@+id/edit_autonomy"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="18dp"
+        android:hint="@string/autonomy"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="@string/kms_per_litre" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:text="SEU GASTO TOTAL SERA DE:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_total_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:text="@string/total_value"
+        android:textColor="@color/purple_700"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#469F86"
+        android:padding="16dp"
+        android:text="@string/calculate"
+        android:textSize="20sp" />
 
 
 </LinearLayout>
