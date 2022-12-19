@@ -7,6 +7,7 @@
         android:endColor="#cfc7f8"
         android:angle="360"/>
 
+<!-- Deixa as bordas do botao redondas -->
     <corners android:radius="30dp"/>
 
 </shape>
