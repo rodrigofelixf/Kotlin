@@ -4,14 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4C084B"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_all_nclusive" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_happy" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_sunny" />
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/text_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="84dp"
         android:gravity="center"
         android:text="Olá, Kotlin!"
         android:textColor="@color/black"
@@ -20,7 +47,7 @@
     <TextView
 
         android:id="@+id/text_motivation_frase"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_name"
         android:layout_marginTop="220dp"
@@ -29,13 +56,22 @@
         android:textColor="@color/black"
         android:textSize="18sp" />
 
+    <View
+        android:id="@+id/view_frasemotivacional"
+        android:background="#4C084B"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="128dp"
+        android:layout_below="@id/text_motivation_frase"
+        android:layout_height="5dp" />
+
     <Button
         android:id="@+id/button_newfrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_motivation_frase"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
         android:backgroundTint="#4C084B"
         android:text="nova frase"
         android:textAllCaps="true" />
