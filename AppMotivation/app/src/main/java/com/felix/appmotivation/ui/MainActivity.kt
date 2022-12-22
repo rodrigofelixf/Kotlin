@@ -1,8 +1,10 @@
 package com.felix.appmotivation.ui
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import com.felix.appmotivation.infra.MotivationConstants
 import com.felix.appmotivation.R
 import com.felix.appmotivation.infra.SecurityPreferences
@@ -21,16 +23,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // Esconder a barra de navegacao
         supportActionBar?.hide()
 
+        // Deixa a aba All selecionada no inicio.
+        handleFilter(R.id.image_all)
+
+        // Abre com o nome salvo na user_activity
         handleUserName()
 
         // Eventos
         binding.buttonNewPhrase.setOnClickListener(this)
+        binding.imageAll.setOnClickListener(this)
+        binding.imageHappy.setOnClickListener(this)
+        binding.imageSunny.setOnClickListener(this)
 
     }
 
     override fun onClick(view: View) {
         if (view.id == R.id.button_new_phrase) {
-            binding.textMotivationFrase.text = teste()
+
+        } else if (view.id in listOf(R.id.image_all, R.id.image_happy, R.id.image_sunny)) {
+            handleFilter(view.id)
         }
     }
 
@@ -38,10 +49,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val name = SecurityPreferences(this).getString(MotivationConstants.KEY.USER_NAME)
         binding.textName.text = ("Olá, $name!")
     }
+
+    private fun handleFilter(id: Int) {
+        binding.imageAll.setColorFilter(ContextCompat.getColor(this,R.color.dark_purple))
+        binding.imageHappy.setColorFilter(ContextCompat.getColor(this,R.color.dark_purple))
+        binding.imageSunny.setColorFilter(ContextCompat.getColor(this,R.color.dark_purple))
+
+        when(id) {
+            R.id.image_all -> {
+                binding.imageAll.setColorFilter(ContextCompat.getColor(this,R.color.white))
+            }
+            R.id.image_happy -> {
+                binding.imageHappy.setColorFilter(ContextCompat.getColor(this,R.color.white))
+            }
+            R.id.image_sunny -> {
+                binding.imageSunny.setColorFilter(ContextCompat.getColor(this,R.color.white))
+            }
+        }
+    }
 }
 
-private fun teste(): String {
-    return "Mete o fio dental e passa o oleo no Bumbum"
-}
+
+
 
 
