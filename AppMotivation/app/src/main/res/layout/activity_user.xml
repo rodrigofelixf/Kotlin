@@ -26,9 +26,9 @@
         android:layout_centerInParent="true"
         android:fontFamily="@font/cabin"
         android:gravity="center_horizontal"
-        android:textColor="@color/white"
         android:hint="@string/your_name"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="24sp" />
 

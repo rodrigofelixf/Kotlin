@@ -15,8 +15,8 @@ import com.felix.appmotivation.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
-    private var categoryID = 0
-    var mock: Mock = Mock()
+    private var categoryID = MotivationConstants.FILTER.ALL
+
 
 
 
@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         // Abre com o nome salvo na user_activity
         handleUserName()
+        // Abre o app com uma frase
         handNextPhrase()
 
         // Eventos

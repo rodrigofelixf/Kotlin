@@ -47,8 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_below="@id/linear_menu"
-        android:gravity="center"
         android:fontFamily="@font/cabin"
+        android:gravity="center"
         android:text=""
         android:textColor="@color/black"
         android:textSize="18sp" />
@@ -56,6 +56,7 @@
     <TextView
 
         android:id="@+id/text_motivation_frase"
+        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_name"
@@ -80,9 +81,9 @@
         android:id="@+id/button_new_phrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/cabin"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/cabin"
         android:layout_marginBottom="32dp"
         android:backgroundTint="#4C084B"
         android:text="@string/new_phrase"
