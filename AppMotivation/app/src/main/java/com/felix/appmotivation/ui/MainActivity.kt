@@ -7,15 +7,22 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import com.felix.appmotivation.infra.MotivationConstants
 import com.felix.appmotivation.R
+import com.felix.appmotivation.data.Mock
+import com.felix.appmotivation.data.Phrase
 import com.felix.appmotivation.infra.SecurityPreferences
 import com.felix.appmotivation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
+    private var categoryID = 0
+    var mock: Mock = Mock()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -28,6 +35,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         // Abre com o nome salvo na user_activity
         handleUserName()
+        handNextPhrase()
 
         // Eventos
         binding.buttonNewPhrase.setOnClickListener(this)
@@ -39,6 +47,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         if (view.id == R.id.button_new_phrase) {
+            handNextPhrase()
 
         } else if (view.id in listOf(R.id.image_all, R.id.image_happy, R.id.image_sunny)) {
             handleFilter(view.id)
@@ -58,15 +67,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when(id) {
             R.id.image_all -> {
                 binding.imageAll.setColorFilter(ContextCompat.getColor(this,R.color.white))
+                categoryID = MotivationConstants.FILTER.ALL
             }
             R.id.image_happy -> {
                 binding.imageHappy.setColorFilter(ContextCompat.getColor(this,R.color.white))
+                categoryID = MotivationConstants.FILTER.HAPPY
             }
             R.id.image_sunny -> {
                 binding.imageSunny.setColorFilter(ContextCompat.getColor(this,R.color.white))
+                categoryID = MotivationConstants.FILTER.SUNNY
             }
         }
     }
+
+    private fun handNextPhrase() {
+        val phrase = Mock().getPhrase(categoryID)
+        binding.textMotivationFrase.text = phrase
+
+    }
+
+
+
 }
 
 
