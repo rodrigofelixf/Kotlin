@@ -1,6 +1,7 @@
 package com.felix.appmotivation.ui
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -14,27 +15,25 @@ import com.felix.appmotivation.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
+    // Evitando uma Exception
     private lateinit var binding: ActivityMainBinding
+
+    // Categorizando os filtros das frases
     private var categoryID = MotivationConstants.FILTER.ALL
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
+        // expandindo o layout
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Esconder a barra de navegacao
+        // Esconde a barra de navegacao
         supportActionBar?.hide()
 
         // Deixa a aba All selecionada no inicio.
         handleFilter(R.id.image_all)
 
-        // Abre com o nome salvo na user_activity
-        handleUserName()
         // Abre o app com uma frase
         handNextPhrase()
 
@@ -43,7 +42,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.imageAll.setOnClickListener(this)
         binding.imageHappy.setOnClickListener(this)
         binding.imageSunny.setOnClickListener(this)
+        binding.textName.setOnClickListener(this)
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        handleUserName()
+    }
+
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onStop() {
+        super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
     }
 
     override fun onClick(view: View) {
@@ -52,6 +73,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         } else if (view.id in listOf(R.id.image_all, R.id.image_happy, R.id.image_sunny)) {
             handleFilter(view.id)
+        } else if (view.id == R.id.text_name) {
+            startActivity(Intent(this, UserActivity::class.java))
         }
     }
 

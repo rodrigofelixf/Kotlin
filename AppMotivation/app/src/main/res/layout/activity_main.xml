@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_motivational"
+    android:background="@drawable/img_darkblue_background"
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
@@ -12,7 +12,6 @@
         android:id="@+id/linear_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4C084B"
         android:paddingStart="8dp"
         android:paddingTop="16dp"
         android:paddingEnd="8dp"
@@ -50,22 +49,21 @@
         android:layout_marginTop="32dp"
         android:fontFamily="@font/cabin"
         android:gravity="center"
-        android:text=""
-        android:textColor="@color/black"
+        android:text="@string/usuario"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
     <TextView
-
         android:id="@+id/text_motivation_frase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/text_name"
         android:layout_marginTop="220dp"
         android:fontFamily="@font/cabin"
-        android:padding="16dp"
         android:gravity="center"
+        android:padding="16dp"
         android:text="@string/app_name"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
     <View
