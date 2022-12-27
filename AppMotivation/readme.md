@@ -14,6 +14,8 @@ A aba all "sinal do infinito" Mescla as duas categorias Happy e Sunny.
 
 * A interacao inicial grava o nome do usuario e se conecta com a a tela principal.
 
+* Na nova atualizacao, agora o usuario pode fazer a alteracao do nome, clicando no "Ola,!" pagina principal.
+
 
 
 
@@ -27,7 +29,7 @@ Tela Inicial
 
 Tela Tela Principal
 <div>
-  <img src = "https://i.imgur.com/tblfu4u.png" width="250" height="500" >
+  <img src = "https://i.imgur.com/duxgswl.png" width="250" height="500" >
 </div>
 
 

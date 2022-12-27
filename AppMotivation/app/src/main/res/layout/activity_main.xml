@@ -60,6 +60,7 @@
         android:layout_below="@id/text_name"
         android:layout_marginTop="220dp"
         android:fontFamily="@font/cabin"
+        android:layout_centerHorizontal="true"
         android:gravity="center"
         android:padding="16dp"
         android:text="@string/app_name"
