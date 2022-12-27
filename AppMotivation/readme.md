@@ -29,7 +29,7 @@ Tela Inicial
 
 Tela Tela Principal
 <div>
-  <img src = "https://i.imgur.com/duxgswl.png" width="250" height="500" >
+  <img src = "https://i.imgur.com/duxgswl.png" width="875" height="683" >
 </div>
 
 
