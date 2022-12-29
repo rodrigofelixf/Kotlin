@@ -25,6 +25,10 @@ class UserActivity : AppCompatActivity(), OnClickListener {
         // userVerify()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+    }
+
     override fun onClick(view: View) {
         if (view.id == R.id.button_save) {
             handleSave()

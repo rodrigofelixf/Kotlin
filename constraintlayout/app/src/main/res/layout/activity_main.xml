@@ -4,39 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#08ad7f"
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_a"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button A"
-        app:layout_constraintEnd_toStartOf="@id/button_b"
-        app:layout_constraintHorizontal_chainStyle="spread"
+        android:layout_marginTop="128dp"
+        android:background="@color/white"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@id/edit_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_email" />
 
     <Button
-        android:id="@+id/button_b"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_login"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button B"
-        app:layout_constraintEnd_toStartOf="@id/button_c"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toEndOf="@id/button_a"
-        app:layout_constraintTop_toTopOf="@id/button_a" />
-
-
-    <Button
-        android:id="@+id/button_c"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        android:text="Button C"
-        app:layout_constraintTop_toTopOf="@id/button_b"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="#dadada"
+        android:padding="12dp"
+        android:text="login"
+        android:textColor="#08ad7f"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/button_b" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_password" />
+
+    <TextView
+        android:id="@+id/text_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="Ainda nao e cadastrado? Cadastre-se!"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
