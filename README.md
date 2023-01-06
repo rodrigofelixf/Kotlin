@@ -1,5 +1,8 @@
 # kotlin estudos para desenvolvimento mobile
 
+## Alguns projetos de aplicativo estao por aqui!
+
+
 ## links de estudos: 
 
 * https://blog.teamtreehouse.com/absolute-beginners-guide-kotlin
