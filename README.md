@@ -1,6 +1,6 @@
 # kotlin estudos para desenvolvimento mobile
 
-## Alguns projetos de aplicativo estao por aqui!
+## Alguns projetos de aplicativos estao por aqui!
 
 
 ## links de estudos: 
