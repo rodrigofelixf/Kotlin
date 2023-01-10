@@ -1,4 +1,4 @@
-package com.felix.convidados.ui
+package com.felix.convidados.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

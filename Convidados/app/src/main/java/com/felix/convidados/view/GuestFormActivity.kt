@@ -1,13 +1,13 @@
-package com.felix.convidados
+package com.felix.convidados.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
+import com.felix.convidados.R
 import com.felix.convidados.databinding.ActivityGuestFormBinding
-import com.felix.convidados.databinding.FragmentAllGuestsBinding
+import com.felix.convidados.viewmodel.GuestFormViewModel
 
 class GuestFormActivity : AppCompatActivity(), OnClickListener {
 

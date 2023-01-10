@@ -1,4 +1,4 @@
-package com.felix.convidados.ui
+package com.felix.convidados.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.felix.convidados.databinding.FragmentAbsentBinding
+import com.felix.convidados.databinding.FragmentAllGuestsBinding
+import com.felix.convidados.viewmodel.AllGuestsViewModel
 
 
-class AbsentFragment : Fragment() {
+class AllGuestsFragment : Fragment() {
 
-    private var _binding: FragmentAbsentBinding? = null
+    private var _binding: FragmentAllGuestsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,12 +25,12 @@ class AbsentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val viewModel =
-            ViewModelProvider(this).get(AbsentViewModel::class.java)
+            ViewModelProvider(this).get(AllGuestsViewModel::class.java)
 
-        _binding = FragmentAbsentBinding.inflate(inflater, container, false)
+        _binding = FragmentAllGuestsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
+        val textView: TextView = binding.textHome
         viewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
