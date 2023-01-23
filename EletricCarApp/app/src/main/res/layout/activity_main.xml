@@ -56,8 +56,9 @@
 
     <TextView
         android:id="@+id/text_price"
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="Price"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image_car_01" />
@@ -66,10 +67,64 @@
         android:id="@+id/text_price_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="R$ 300,000"
         app:layout_constraintStart_toEndOf="@id/text_price"
         app:layout_constraintTop_toBottomOf="@id/image_car_01" />
+
+    <TextView
+        android:id="@+id/text_batery"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Batery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_price" />
+
+    <TextView
+        android:id="@+id/text_batery_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="93,4 kWh"
+        app:layout_constraintStart_toEndOf="@id/text_batery"
+        app:layout_constraintTop_toBottomOf="@id/text_price" />
+
+    <TextView
+        android:id="@+id/text_power"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Power"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_batery" />
+
+    <TextView
+        android:id="@+id/text_power_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="300 cv"
+        app:layout_constraintStart_toEndOf="@id/text_power"
+        app:layout_constraintTop_toBottomOf="@id/text_batery" />
+
+    <TextView
+        android:id="@+id/text_recharge"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Recharge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_power" />
+
+    <TextView
+        android:id="@+id/text_recharge_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="60 min"
+        app:layout_constraintStart_toEndOf="@id/text_recharge"
+        app:layout_constraintTop_toBottomOf="@id/text_power" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
