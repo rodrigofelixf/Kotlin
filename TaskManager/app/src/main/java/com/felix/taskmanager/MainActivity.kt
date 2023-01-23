@@ -62,6 +62,7 @@ private fun FinalScreen(
             .fillMaxHeight(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
+
     ) {
         Image(
             painter = image,

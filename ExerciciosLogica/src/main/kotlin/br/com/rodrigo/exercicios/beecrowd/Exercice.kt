@@ -4,19 +4,26 @@ import java.math.BigDecimal
 import kotlin.math.abs
 
 fun main() {
-    val (a, b, c) = readLine()!!.split(" ")
-    val aInt = a.toInt()
-    val bInt = b.toInt()
-    val cInt = c.toInt()
+    val nome = "Bruno"
+    val altura: Float = 1.75f * 1.75f
+    val peso: Int = 150
+    val result = peso/altura
 
+    println(nome)
+    println(result)
 
-    val maiorab = (aInt + bInt + Math.abs(aInt - bInt)) / 2
+    if(result < 18.5){
+        println("magreza")
 
-    var maior = 0
-    if (maiorab > cInt) maior = maiorab else maior = cInt
+    }else if(result >= 18.5 && result <= 24.9){
+        println("normal")
+    }else if(result >= 25 && result <=29.9){
+        println("SOBREPESO")
+    }else if(result >= 30 && result <=39.9){
+        println("obesidade II")
+    }else
+        println("obesidade grave")
 
-
-    print("$maior eh o maior")
 
 }
 

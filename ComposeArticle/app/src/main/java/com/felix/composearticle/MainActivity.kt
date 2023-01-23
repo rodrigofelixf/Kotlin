@@ -84,7 +84,6 @@ private fun ComposeCard(
                 .padding(16.dp),
             textAlign = TextAlign.Justify
         )
-
     }
 }
 

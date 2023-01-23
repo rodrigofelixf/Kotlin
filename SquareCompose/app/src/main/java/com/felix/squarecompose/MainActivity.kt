@@ -1,7 +1,6 @@
 package com.felix.squarecompose
 
 import android.os.Bundle
-import android.support.v4.os.IResultReceiver.Default
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -18,9 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.felix.squarecompose.ui.theme.SquareComposeTheme
-import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,7 +40,7 @@ class MainActivity : ComponentActivity() {
 fun SquareCompose() {
     //preenche toda a tela horizontalmente
     Column(Modifier.fillMaxWidth()) {
-    //coloca o peso 1f no Row de cima igual ao de baixo para ficar igual
+        //coloca o peso 1f no Row de cima igual ao de baixo para ficar igual
         Row(Modifier.weight(1f)) {
             SquareComposeCard(
                 title = stringResource(id = R.string.text_composable),

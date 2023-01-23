@@ -70,4 +70,19 @@ class GuestRepository private constructor(context: Context) {
         }
 
     }
+
+    fun getAll() {
+        val db = guestDataBase.readableDatabase
+        val selection = arrayOf(
+            DataBaseConstants.GUEST.COLUMNS.ID,
+            DataBaseConstants.GUEST.COLUMNS.NAME,
+            DataBaseConstants.GUEST.COLUMNS.PRESENCE
+        )
+
+        val cursor = db.query(
+            DataBaseConstants.GUEST.TABLE_NAME, selection, null,
+            null, null,
+            null, null
+        )
+    }
 }
