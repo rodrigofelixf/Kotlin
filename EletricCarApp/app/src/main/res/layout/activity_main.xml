@@ -126,5 +126,39 @@
         app:layout_constraintStart_toEndOf="@id/text_recharge"
         app:layout_constraintTop_toBottomOf="@id/text_power" />
 
+    <EditText
+        android:id="@+id/edit_price_kwh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Price kWh"
+        android:inputType="number"
+        android:maxLength="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_recharge" />
+
+    <EditText
+        android:id="@+id/edit_km_run"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:hint="Km run"
+        android:inputType="number"
+        android:maxLength="10"
+        app:layout_constraintEnd_toEndOf="@id/edit_price_kwh"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/edit_price_kwh"
+        app:layout_constraintTop_toBottomOf="@id/edit_price_kwh" />
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="@id/edit_km_run"
+        app:layout_constraintStart_toStartOf="@id/edit_km_run"
+        app:layout_constraintTop_toBottomOf="@id/edit_km_run" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
