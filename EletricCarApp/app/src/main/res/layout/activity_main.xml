@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <TextView
         android:id="@+id/text_titulo"
@@ -159,6 +159,16 @@
         app:layout_constraintEnd_toEndOf="@id/edit_km_run"
         app:layout_constraintStart_toStartOf="@id/edit_km_run"
         app:layout_constraintTop_toBottomOf="@id/edit_km_run" />
+
+    <TextView
+        android:id="@+id/text_calculo"
+        android:layout_width="0dp"
+        android:textSize="50sp"
+        android:text="test"
+        app:layout_constraintTop_toBottomOf="@id/button_calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
