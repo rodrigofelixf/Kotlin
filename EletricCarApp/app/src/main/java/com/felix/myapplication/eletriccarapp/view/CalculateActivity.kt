@@ -9,10 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.felix.myapplication.eletriccarapp.R
 import com.felix.myapplication.eletriccarapp.databinding.ActivityCalculateBinding
-import com.felix.myapplication.eletriccarapp.viewmodel.somaViewModel
+import com.felix.myapplication.eletriccarapp.viewmodel.SomaViewModel
 
 class CalculateActivity : AppCompatActivity(), OnClickListener {
-    private lateinit var viewModel: somaViewModel
+    private lateinit var viewModel: SomaViewModel
     private lateinit var binding: ActivityCalculateBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class CalculateActivity : AppCompatActivity(), OnClickListener {
         binding = ActivityCalculateBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this).get(somaViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(SomaViewModel::class.java)
 
         //eventos
         binding.buttonCalculate.setOnClickListener(this)
