@@ -17,6 +17,7 @@ class AdapterCar(private val context: Context, private val listaCar: MutableList
     }
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
+        holder.image.setImageResource(listaCar[position].image)
         holder.price.text = listaCar[position].price
         holder.batery.text = listaCar[position].battery
         holder.power.text = listaCar[position].power
@@ -28,6 +29,7 @@ class AdapterCar(private val context: Context, private val listaCar: MutableList
 
 
     inner class CarViewHolder(binding: CarItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        val image = binding.imageCar01
         val price = binding.textPriceValue
         val batery = binding.textBateryValue
         val power = binding.textPowerValue

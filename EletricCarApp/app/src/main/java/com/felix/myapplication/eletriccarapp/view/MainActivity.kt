@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     private fun carItems() {
         val car1 = CarModel(
-            R.id.image_car_01,
+            R.drawable.electric_car,
             "R$ 200,000",
             "232 KwH",
             "250 cv",
@@ -52,13 +52,32 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         carList.add(car1)
 
         val car2 = CarModel(
-            R.id.image_car_01,
+            R.drawable.image_ferrari,
             "R$ 1.000,000",
-            "2332 KwH",
-            "2503 cv",
-            "1202 min"
+            "432 KwH",
+            "350 cv",
+            "45 min"
         )
         carList.add(car2)
+
+        val car3 = CarModel(
+            R.drawable.image_uno,
+            "R$ 4.000",
+            " ♾ KwH",
+            "1000 cv",
+            "5 hidrelétricas"
+        )
+        carList.add(car3)
+
+        val car4 = CarModel(
+            R.drawable.image_lamborghini,
+            "R$ 450.000",
+            " 300 KwH",
+            "400 cv",
+            "120 min"
+        )
+        carList.add(car4)
+
     }
 
 
