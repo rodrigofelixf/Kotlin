@@ -6,14 +6,20 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewpager2.widget.ViewPager2
 import com.felix.myapplication.eletriccarapp.R
 import com.felix.myapplication.eletriccarapp.adapter.AdapterCar
+import com.felix.myapplication.eletriccarapp.adapter.TabAdapter
+import com.felix.myapplication.eletriccarapp.data.CarData
 import com.felix.myapplication.eletriccarapp.databinding.ActivityMainBinding
 import com.felix.myapplication.eletriccarapp.model.CarModel
+import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity(), OnClickListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapterCar: AdapterCar
+
+
     private val carList: MutableList<CarModel> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +27,9 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         supportActionBar?.hide()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //setupList()
 
-        binding.recyclerInfomacoes.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.recyclerInfomacoes.setHasFixedSize(true)
-        adapterCar = AdapterCar(this, carList)
-        binding.recyclerInfomacoes.adapter = adapterCar
-        carItems()
+        setupList()
+        setupTabs()
 
         //eventos de click
         binding.buttonCalculateMain.setOnClickListener(this)
@@ -41,42 +42,27 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         }
     }
 
-    private fun carItems() {
-        val car1 = CarModel(
-            R.drawable.electric_car,
-            "R$ 200,000",
-            "232 KwH",
-            "250 cv",
-            "120 min"
-        )
-        carList.add(car1)
 
-        val car2 = CarModel(
-            R.drawable.image_ferrari,
-            "R$ 1.000,000",
-            "432 KwH",
-            "350 cv",
-            "45 min"
-        )
-        carList.add(car2)
+    private fun setupList() {
+        binding.recyclerInfomacoes.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.recyclerInfomacoes.setHasFixedSize(true)
 
-        val car3 = CarModel(
-            R.drawable.image_uno,
-            "R$ 4.000",
-            " ♾ KwH",
-            "1000 cv",
-            "5 hidrelétricas"
-        )
-        carList.add(car3)
+        // Criando um adapter para introduzir no Recyclerview do XML
+        adapterCar = AdapterCar(this, carList)
+        binding.recyclerInfomacoes.adapter = adapterCar
 
-        val car4 = CarModel(
-            R.drawable.image_lamborghini,
-            "R$ 450.000",
-            " 300 KwH",
-            "400 cv",
-            "120 min"
-        )
-        carList.add(car4)
+        val carData = CarData.listDataCar
+        carData.forEach {
+            carList.add(it)
+        }
+
+
+    }
+
+    private fun setupTabs() {
+        val tabsAdapter = TabAdapter(this)
+        binding.viewPageCar.adapter = tabsAdapter
 
     }
 

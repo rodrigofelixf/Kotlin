@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.felix.myapplication.eletriccarapp.databinding.CarItemBinding
 import com.felix.myapplication.eletriccarapp.model.CarModel
 
-class AdapterCar(private val context: Context, private val listaCar: MutableList<CarModel>) :
+class AdapterCar(private val context: Context, private val carModel: MutableList<CarModel>) :
     RecyclerView.Adapter<AdapterCar.CarViewHolder>() {
 
 
@@ -17,14 +17,14 @@ class AdapterCar(private val context: Context, private val listaCar: MutableList
     }
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
-        holder.image.setImageResource(listaCar[position].image)
-        holder.price.text = listaCar[position].price
-        holder.batery.text = listaCar[position].battery
-        holder.power.text = listaCar[position].power
-        holder.recharge.text = listaCar[position].Recharge
+        holder.image.setImageResource(carModel[position].image)
+        holder.price.text = carModel[position].price
+        holder.batery.text = carModel[position].battery
+        holder.power.text = carModel[position].power
+        holder.recharge.text = carModel[position].Recharge
     }
 
-    override fun getItemCount() = listaCar.size
+    override fun getItemCount() = carModel.size
 
 
 
