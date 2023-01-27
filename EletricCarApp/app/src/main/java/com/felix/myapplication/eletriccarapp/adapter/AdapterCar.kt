@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.felix.myapplication.eletriccarapp.databinding.CarItemBinding
 import com.felix.myapplication.eletriccarapp.model.CarModel
+import com.felix.myapplication.eletriccarapp.view.CarFragment
 
 class AdapterCar(private val context: Context, private val carModel: MutableList<CarModel>) :
     RecyclerView.Adapter<AdapterCar.CarViewHolder>() {

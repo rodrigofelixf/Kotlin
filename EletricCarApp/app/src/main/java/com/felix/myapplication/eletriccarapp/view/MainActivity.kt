@@ -6,15 +6,12 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewpager2.widget.ViewPager2
 import com.felix.myapplication.eletriccarapp.R
 import com.felix.myapplication.eletriccarapp.adapter.AdapterCar
 import com.felix.myapplication.eletriccarapp.adapter.TabAdapter
 import com.felix.myapplication.eletriccarapp.data.CarData
 import com.felix.myapplication.eletriccarapp.databinding.ActivityMainBinding
 import com.felix.myapplication.eletriccarapp.model.CarModel
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayout.TabView
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity(), OnClickListener {
@@ -30,37 +27,19 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupList()
         setupViews()
 
-        //eventos de click
-        binding.buttonCalculateMain.setOnClickListener(this)
+
 
     }
 
     override fun onClick(view: View) {
-        if (view.id == R.id.button_calculate_main) {
+        if (view.id == R.id.floating_buttom_calculate) {
             startActivity(Intent(this, CalculateActivity::class.java))
         }
     }
 
 
-    private fun setupList() {
-        binding.recyclerInfomacoes.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.recyclerInfomacoes.setHasFixedSize(true)
-
-        // Criando um adapter para introduzir no Recyclerview do XML
-        adapterCar = AdapterCar(this, carList)
-        binding.recyclerInfomacoes.adapter = adapterCar
-
-        val carData = CarData.listDataCar
-        carData.forEach {
-            carList.add(it)
-        }
-
-
-    }
 
 
     private fun setupViews() {

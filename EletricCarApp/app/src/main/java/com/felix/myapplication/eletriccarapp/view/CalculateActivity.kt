@@ -15,6 +15,7 @@ class CalculateActivity : AppCompatActivity(), OnClickListener {
     private lateinit var viewModel: SomaViewModel
     private lateinit var binding: ActivityCalculateBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()

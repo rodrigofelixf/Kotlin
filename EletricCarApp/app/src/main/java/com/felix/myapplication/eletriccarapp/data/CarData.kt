@@ -38,7 +38,7 @@ object CarData {
     )
 
     /*
-    Essa lista serve para organizar os dados e chama-la na MainActivity na funcao setupList()
+    Essa lista serve para organizar os dados e chama-la na CarFragment na funcao setupList()
      */
     val listDataCar = listOf(car1, car2, car3, car4)
 
