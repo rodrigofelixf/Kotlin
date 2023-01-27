@@ -14,6 +14,8 @@ import com.felix.myapplication.eletriccarapp.data.CarData
 import com.felix.myapplication.eletriccarapp.databinding.ActivityMainBinding
 import com.felix.myapplication.eletriccarapp.model.CarModel
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayout.TabView
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity(), OnClickListener {
     private lateinit var binding: ActivityMainBinding
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         setContentView(binding.root)
 
         setupList()
-        setupTabs()
+        setupViews()
 
         //eventos de click
         binding.buttonCalculateMain.setOnClickListener(this)
@@ -60,9 +62,20 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     }
 
-    private fun setupTabs() {
-        val tabsAdapter = TabAdapter(this)
-        binding.viewPageCar.adapter = tabsAdapter
+
+    private fun setupViews() {
+        /*
+        o viewPager pega os conteudos dos fragments e em seguida o TabLayoutMediator
+        faz as ligacoes e as criacoes do nome.
+         */
+        val tabLayout = binding.tabLayout
+        val viewPager2 = binding.viewPager2
+        val adapter = TabAdapter(this)
+        viewPager2.adapter = adapter
+
+        TabLayoutMediator(tabLayout, viewPager2) { tab, position ->
+            tab.text = getString(adapter.tabs[position])
+        }.attach()
 
     }
 
