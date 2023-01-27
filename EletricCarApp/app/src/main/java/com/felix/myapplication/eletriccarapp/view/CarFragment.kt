@@ -61,7 +61,7 @@ class CarFragment : Fragment() {
         adapterCar = AdapterCar(requireContext(), carList)
         recyclerIniformacoes.adapter = adapterCar
 
-        val carData = CarData.listDataCar
+        val carData = CarData.list
         carData.forEach {
             carList.add(it)
         }

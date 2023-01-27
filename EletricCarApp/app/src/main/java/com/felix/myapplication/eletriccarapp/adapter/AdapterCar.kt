@@ -13,16 +13,15 @@ class AdapterCar(private val context: Context, private val carModel: MutableList
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarViewHolder {
-        val itemLista = CarItemBinding.inflate(LayoutInflater.from(context), parent, false)
-        return CarViewHolder(itemLista)
+        val itemList = CarItemBinding.inflate(LayoutInflater.from(context), parent, false)
+        return CarViewHolder(itemList)
     }
 
     override fun onBindViewHolder(holder: CarViewHolder, position: Int) {
-        holder.image.setImageResource(carModel[position].image)
         holder.price.text = carModel[position].price
         holder.batery.text = carModel[position].battery
         holder.power.text = carModel[position].power
-        holder.recharge.text = carModel[position].Recharge
+        holder.recharge.text = carModel[position].recharge
     }
 
     override fun getItemCount() = carModel.size
@@ -30,7 +29,6 @@ class AdapterCar(private val context: Context, private val carModel: MutableList
 
 
     inner class CarViewHolder(binding: CarItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        val image = binding.imageCar01
         val price = binding.textPriceValue
         val batery = binding.textBateryValue
         val power = binding.textPowerValue

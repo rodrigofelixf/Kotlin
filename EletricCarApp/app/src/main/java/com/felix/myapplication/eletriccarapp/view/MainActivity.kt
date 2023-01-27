@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
         setupViews()
 
-
-
     }
 
     override fun onClick(view: View) {
@@ -38,9 +36,6 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             startActivity(Intent(this, CalculateActivity::class.java))
         }
     }
-
-
-
 
     private fun setupViews() {
         /*
